@@ -7,9 +7,9 @@ class ABTestsPatch(Patch):
         "\.method public final \w+\(LX\/\w+;I\)Z(.*?)\.end method", re.DOTALL
     )
     BAD_TESTS = [
-        "0x936",
-        "0x33F",
-        "0x93",
+        "0x936"#,
+        # "0x33F",
+        # "0x93",
     ]
 
     def __init__(self, extracted_path):

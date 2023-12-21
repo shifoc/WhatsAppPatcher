@@ -6,6 +6,10 @@ from whatsapp_patcher.utils.downloader import download_latest_whatsapp
 from whatsapp_patcher.patcher import Patcher
 from timeit import default_timer
 
+def convert_seconds_to_min_sec(seconds):
+    minutes = seconds // 60
+    remaining_seconds = seconds % 60
+    return minutes, remaining_seconds
 
 def main():
     start = default_timer()
@@ -38,7 +42,8 @@ def main():
     patcher.patch()
     extractor.compile_smali()
     extractor.sign_apk()
-    print(f"It took {default_timer()-start} seconds to complete the run.")
+    minutes, remaining_seconds = convert_seconds_to_min_sec(default_timer()-start)
+    print(f"It took {minutes} minutes and {remaining_seconds} seconds to complete the run.")
 
 
 if __name__ == "__main__":
