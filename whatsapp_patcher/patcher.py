@@ -59,7 +59,7 @@ class Patcher:
                 patches_to_find.remove(patch)
         for patch in self.patches:
             if patch.class_data is None:
-                cprint(f"[-] Didn't found {patch} class.", "red")
+                cprint(f"[-] Didn't find {patch} class.", "red")
 
     def patch_classes(self):
         for patch in self.patches:

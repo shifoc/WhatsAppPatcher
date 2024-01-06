@@ -5,7 +5,7 @@ import os
 from termcolor import cprint
 import zipfile
 
-apktool_file_name = "apktool_2.9.1.jar"
+apktool_file_name = "apktool_2.9.2.jar"
 uber_signer_file_name = "uber-apk-signer-1.3.0.jar"
 
 class Extractor:
